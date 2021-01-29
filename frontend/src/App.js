@@ -9,10 +9,12 @@ import CartScreen from "./screens/CartScreen";
 import LoginScreen from "./screens/LoginScreen.js";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import UserListScreen from "./screens/UserListScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
+import UserEditScreen from "./screens/UserEditScreen";
 
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/products/:id" component={ProductScreen} />
           <Route path="/cart/:id?" component={CartScreen} />
+          <Route path="/admin/userlist" component={UserListScreen} />
+          <Route path="/admin/users/:id/edit" component={UserEditScreen} />
           <Route exact path="/" component={HomeScreen} />
         </Container>
       </main>
