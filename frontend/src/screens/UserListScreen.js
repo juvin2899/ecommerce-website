@@ -51,7 +51,7 @@ const UserListScreen = ({ history }) => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
+            {users.filter(user=>user._id!=userInfo._id).map((user) => (
               <tr key={user._id}>
                 <td>{user._id}</td>
                 <td>{user.name}</td>

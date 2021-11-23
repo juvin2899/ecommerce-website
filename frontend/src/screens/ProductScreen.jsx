@@ -87,7 +87,8 @@ const ProductScreen = ({ history, match }) => {
               <Image src={product.image} alt={product.name} fluid />
             </Col>
             <Col md={3}>
-              <ListGroup variant="flush">
+              <ListGroup variant="flush">  
+              {/* flush removes outer border */}
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>
@@ -97,9 +98,9 @@ const ProductScreen = ({ history, match }) => {
                     text={product.numReviews + "reviews"}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Description: ${product.description}
+                  Description: ₹{product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -110,7 +111,7 @@ const ProductScreen = ({ history, match }) => {
                     <Row>
                       <Col>Price</Col>
                       <Col>
-                        <strong>${product.price}</strong>
+                        <strong>₹{product.price}</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
